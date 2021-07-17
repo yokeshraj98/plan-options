@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap");
+body {
+    background: white;
+}
+
+.plan {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    color: #181059;
+    font-family: "Inter", sans-serif;
+}
+
+.plan:hover {
+    color: white;
+    background: #181059;
+}
+
+.plan-feature {
+    list-style: none;
+    padding: 0px;
+}
+
+.plan-feature li:before {
+    content: "✓";
+    margin-right: 10px;
+}
+
+.head {
+    font-size: 24px;
+}
+
+.plan-feature li {
+    margin-bottom: 16px;
+}
+
+.plan-feature li:last-child {
+    opacity: 0.3;
+}
+
+.plan-feature li:last-child:before {
+    content: "×";
+}
+
+.plan-amount {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.plan-duration {
+    opacity: 0.6;
+}
+
+.plan-choose {
+    width: 100%;
+    background: #8645ff;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-save {
+    background: #ffffff;
+    border-radius: 4px;
+    color: #8645ff;
+    border: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.plan:first-child .plan-feature li {
+    opacity: 0.3;
+}
+
+.plan:first-child .plan-feature li:first-child {
+    opacity: 1;
+}
+
+.plan:first-child .plan-feature li:last-child:before {
+    content: "✓";
+}
+
+.plan:nth-child(2) .plan-feature li:nth-child(n+3) {
+    opacity: 0.3;
+}
+
+.plan:nth-child(4) .plan-feature li {
+    opacity: 1;
+}
+
+.plan:nth-child(4) .plan-feature li:last-child:before {
+    content: "✓";
+}
+
+.plan-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(5px + 1vw);
+}
+
+@media (min-width: 440px) {
+    .plan-options {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 760px) {
+    .plan-options {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
